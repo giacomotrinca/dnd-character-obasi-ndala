@@ -11,6 +11,9 @@
 \usepackage{booktabs}
 \usepackage{graphicx}
 
+% Stat block body: ridotto per far stare l'intera scheda in una pagina
+\DndSetFonts[stat-block-body-style=\footnotesize]
+
 \title{Obasi N'Dala \\
   \large Scheda del Personaggio --- Mago dell'Ordine degli Scriba}
 \author{Giocatore}
@@ -37,7 +40,7 @@
   \caption{Obasi N'Dala, ritratto.}
 \end{figure}
 
-\begin{DndMonster}[width=\textwidth + 8pt]{Obasi N'Dala}
+\begin{DndMonster}{Obasi N'Dala}
   \DndMonsterType{Umano Variante, Mago (Ordine degli Scriba) 5º, Caotico Buono}
 
   \DndMonsterBasics[
@@ -65,6 +68,13 @@
   ]
 
   \DndMonsterSection{Tratti}
+
+  \DndMonsterAction{Umano Variante (razza)}
+  \textit{Incremento punteggi.} Due diverse caratteristiche a scelta
+  ricevono $+1$. \textit{Abilità.} Competente in un'abilità a scelta.
+  \textit{Talento.} Un talento a tua scelta (Resiliente COS).
+  \textit{Taglia.} Media; velocità 9 m. \textit{Lingue.} Corrente e una
+  lingua extra a scelta.
 
   \DndMonsterAction{Resiliente (COS)}
   $+1$ Cos; competente nei tiri salvezza su Costituzione.
@@ -158,26 +168,6 @@
 
   Carico max 82,5~kg -- Monete: 708~mo.
 \end{DndMonster}
-
-\clearpage
-
-\section{Capacità razziali (Umano Variante, PHB 2014)}
-\begin{itemize}
-  \item \textbf{Età.} Gli umani raggiungono l'età adulta verso la fine
-        dell'adolescenza e vivono meno di un secolo.
-  \item \textbf{Taglia.} Gli umani variano molto in altezza e corporatura.
-        La tua taglia è Media.
-  \item \textbf{Velocità.} La tua velocità base sul terreno è di 9 metri.
-  \item \textbf{Incremento punteggi.} Aumenta di 1 due diverse
-        caratteristiche a tua scelta.
-  \item \textbf{Abilità.} Sei competente in un'abilità a tua scelta.
-  \item \textbf{Talento.} Ottieni un talento a tua scelta.
-  \item \textbf{Lingue.} Puoi parlare, leggere e scrivere il Corrente e
-        una lingua extra a tua scelta.
-\end{itemize}
-
-Talento scelto: \textbf{Resiliente (COS)} --- +1 Cos, competenza nei
-tiri salvezza su Costituzione.
 
 % ------------------------------------------------------------
 \part{Equipaggiamento e Magie}

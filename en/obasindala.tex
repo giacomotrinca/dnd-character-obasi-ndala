@@ -11,6 +11,9 @@
 \usepackage{booktabs}
 \usepackage{graphicx}
 
+% Stat block body: reduced so the whole sheet fits on one page
+\DndSetFonts[stat-block-body-style=\footnotesize]
+
 \title{Obasi N'Dala \\
   \large Character Sheet --- Wizard of the Order of Scribes}
 \author{Player}
@@ -37,7 +40,7 @@
   \caption{Obasi N'Dala, portrait.}
 \end{figure}
 
-\begin{DndMonster}[width=\textwidth + 8pt]{Obasi N'Dala}
+\begin{DndMonster}{Obasi N'Dala}
   \DndMonsterType{Variant Human, Wizard (Order of Scribes) 5th, Chaotic Good}
 
   \DndMonsterBasics[
@@ -65,6 +68,13 @@
   ]
 
   \DndMonsterSection{Traits}
+
+  \DndMonsterAction{Variant Human (race)}
+  \textit{Ability Score Increase.} Two different ability scores of your
+  choice gain $+1$. \textit{Skills.} Proficiency in one skill of your
+  choice. \textit{Feat.} One feat of your choice (Resilient CON).
+  \textit{Size.} Medium; speed 9 m. \textit{Languages.} Common and one
+  extra language of your choice.
 
   \DndMonsterAction{Resilient (CON)}
   $+1$ Con; proficiency in Constitution saving throws.
@@ -155,27 +165,6 @@
 
   Max load 82.5~kg -- Coin: 708~gp.
 \end{DndMonster}
-
-\clearpage
-
-\section{Variant Human traits (PHB 2014)}
-\begin{itemize}
-  \item \textbf{Age.} Humans reach adulthood in their late teens and
-        live less than a century.
-  \item \textbf{Size.} Humans vary widely in height and build. Your size
-        is Medium.
-  \item \textbf{Speed.} Your base walking speed is 9 meters.
-  \item \textbf{Ability Score Increase.} Two different ability scores of
-        your choice increase by 1.
-  \item \textbf{Skills.} You gain proficiency in one skill of your
-        choice.
-  \item \textbf{Feat.} You gain one feat of your choice.
-  \item \textbf{Languages.} You can speak, read, and write Common and
-        one extra language of your choice.
-\end{itemize}
-
-Feat chosen: \textbf{Resilient (CON)} --- +1 Con, proficiency in
-Constitution saving throws.
 
 % ------------------------------------------------------------
 \part{Equipment \& Spells}
