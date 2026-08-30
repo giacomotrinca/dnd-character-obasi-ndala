@@ -4,7 +4,7 @@
 %  Variant Human (PHB 2014 - data from 5e.tools)
 %  Build with:  pdflatex obasindala.tex   (2 passes)
 % ============================================================
-\documentclass[letterpaper,twocolumn,openany,nodeprecatedcode]{dndbook}
+\documentclass[letterpaper,twocolumn,openany,nodeprecatedcode,justified]{dndbook}
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
@@ -20,6 +20,11 @@
 \date{\today}
 
 \begin{document}
+
+% Clean justification: re-enable hyphenation disabled by dndbook
+\hyphenpenalty=50
+\tolerance=400
+\emergencystretch=1.5em
 
 \chapter*{Character Sheet}
 
@@ -134,18 +139,23 @@
 
   \DndMonsterSection{Spells (DC 16, attack bonus $+8$)}
 
+  \DndMonsterAction{Spell Preparation}
+  You can prepare 10 spells at the end of a long rest (level 5 + Intelligence
+  modifier $+5$). Prepared spells are marked with an asterisk ($\ast$) in
+  the book.
+
   \DndMonsterAction{Cantrips (4)}
   Light, Shocking Grasp, Fire Bolt, Chill Touch.
 
-  \DndMonsterAction{1st Level (4 slots, 4 prepared)}
+  \DndMonsterAction{1st Level (4 slots)}
   Chromatic Orb, Mage Armor, Magic Missile, Shield.\\
   \emph{Rituals in the book (not prepared):} Alarm, Identify, Detect
   Magic, Find Familiar.
 
-  \DndMonsterAction{2nd Level (3 slots, 4 prepared)}
+  \DndMonsterAction{2nd Level (3 slots)}
   Phantasmal Force, Invisibility, Dragon's Breath, Tasha's Mind Whip.
 
-  \DndMonsterAction{3rd Level (2 slots, 2 prepared)}
+  \DndMonsterAction{3rd Level (2 slots)}
   Haste, Fireball (8d6, DEX save DC 16, 6 m sphere).
 
   \DndMonsterSection{Equipment}
@@ -228,6 +238,9 @@ and opens a gate to the Astral Plane.
 
 \chapter*{Spells}
 
+Prepared spells are marked with an asterisk ($\ast$) after the name. Spells in
+the book that are not prepared are collected under \emph{Rituals in the book}.
+
 \section{Cantrips (4)}
 
 \DndSpellHeader{Light}{Evocation cantrip}{1 action}{Touch}{V, M (a firefly or phosphorescent moss)}{1 hour}
@@ -256,25 +269,25 @@ If you hit an undead target, it also has disadvantage on attack rolls against yo
 
 This spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).
 
-\section{1st Level (slots: 4) -- 4 prepared}
+\section{1st Level (slots: 4)}
 
-\DndSpellHeader{Chromatic Orb}{1st-level evocation}{1 action}{90 feet}{V, S, M (a diamond worth at least 50 gp)}{Instantaneous}
+\DndSpellHeader{Chromatic Orb$\ast$}{1st-level evocation}{1 action}{90 feet}{V, S, M (a diamond worth at least 50 gp)}{Instantaneous}
 
 You hurl a 4-inch-diameter sphere of energy at a creature that you can see within range. You choose acid, cold, fire, lightning, poison, or thunder for the type of orb you create, and then make a ranged spell attack against the target. If the attack hits, the creature takes 3d8 damage of the type you chose.
 
 \emph{At Higher Levels.} When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st.
 
-\DndSpellHeader{Mage Armor}{1st-level abjuration}{1 action}{Touch}{V, S, M (a piece of cured leather)}{8 hours}
+\DndSpellHeader{Mage Armor$\ast$}{1st-level abjuration}{1 action}{Touch}{V, S, M (a piece of cured leather)}{8 hours}
 
 You touch a willing creature who isn't wearing armor, and a protective magical force surrounds it until the spell ends. The target's base AC becomes 13 + its Dexterity modifier. The spell ends if the target dons armor or if you dismiss the spell as an action.
 
-\DndSpellHeader{Magic Missile}{1st-level evocation}{1 action}{120 feet}{V, S}{Instantaneous}
+\DndSpellHeader{Magic Missile$\ast$}{1st-level evocation}{1 action}{120 feet}{V, S}{Instantaneous}
 
 You create three glowing darts of magical force. Each dart hits a creature of your choice that you can see within range. A dart deals 1d4 + 1 force damage to its target. The darts all strike simultaneously, and you can direct them to hit one creature or several.
 
 \emph{At Higher Levels.} When you cast this spell using a spell slot of 2nd level or higher, the spell creates one more dart for each slot level above 1st.
 
-\DndSpellHeader{Shield}{1st-level abjuration}{1 reaction, which you take when you are hit by an attack or targeted by the magic missile spell}{Self}{V, S}{1 round}
+\DndSpellHeader{Shield$\ast$}{1st-level abjuration}{1 reaction, which you take when you are hit by an attack or targeted by the magic missile spell}{Self}{V, S}{1 round}
 
 An invisible barrier of magical force appears and protects you. Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from magic missile.
 
@@ -314,9 +327,9 @@ You can't have more than one familiar at a time. If you cast this spell while yo
 
 Finally, when you cast a spell with a range of touch, your familiar can deliver the spell as if it had cast the spell. Your familiar must be within 100 feet of you, and it must use its reaction to deliver the spell when you cast it. If the spell requires an attack roll, you use your attack modifier for the roll.
 
-\section{2nd Level (slots: 3) -- 4 prepared}
+\section{2nd Level (slots: 3)}
 
-\DndSpellHeader{Phantasmal Force}{2nd-level illusion}{1 action}{60 feet}{V, S, M (a bit of fleece)}{1 minute (concentration)}
+\DndSpellHeader{Phantasmal Force$\ast$}{2nd-level illusion}{1 action}{60 feet}{V, S, M (a bit of fleece)}{1 minute (concentration)}
 
 You craft an illusion that takes root in the mind of a creature that you can see within range. The target must make an Intelligence saving throw. On a failed save, you create a phantasmal object, creature, or other visible phenomenon of your choice that is no larger than a 10-foot cube and that is perceivable only to the target for the duration. This spell has no effect on undead or constructs.
 
@@ -328,33 +341,33 @@ While a target is affected by the spell, the target treats the phantasm as if it
 
 An affected target is so convinced of the phantasm's reality that it can even take damage from the illusion. A phantasm created to appear as a creature can attack the target. Similarly, a phantasm created to appear as fire, a pool of acid, or lava can burn the target. Each round on your turn, the phantasm can deal 1d6 psychic damage to the target if it is in the phantasm's area or within 5 feet of the phantasm, provided that the illusion is of a creature or hazard that could logically deal damage, such as by attacking. The target perceives the damage as a type appropriate to the illusion.
 
-\DndSpellHeader{Invisibility}{2nd-level illusion}{1 action}{Touch}{V, S, M (an eyelash encased in gum arabic)}{1 hour (concentration)}
+\DndSpellHeader{Invisibility$\ast$}{2nd-level illusion}{1 action}{Touch}{V, S, M (an eyelash encased in gum arabic)}{1 hour (concentration)}
 
 A creature you touch becomes invisible until the spell ends. Anything the target is wearing or carrying is invisible as long as it is on the target's person. The spell ends for a target that attacks or casts a spell.
 
 \emph{At Higher Levels.} When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd.
 
-\DndSpellHeader{Dragon's Breath}{2nd-level transmutation}{1 bonus action}{Touch}{V, S, M (a hot pepper)}{1 minute (concentration)}
+\DndSpellHeader{Dragon's Breath$\ast$}{2nd-level transmutation}{1 bonus action}{Touch}{V, S, M (a hot pepper)}{1 minute (concentration)}
 
 You touch one willing creature and imbue it with the power to spew magical energy from its mouth, provided it has one. Choose acid, cold, fire, lightning, or poison. Until the spell ends, the creature can use an action to exhale energy of the chosen type in a 15-foot cone. Each creature in that area must make a Dexterity saving throw, taking 3d6 damage of the chosen type on a failed save, or half as much damage on a successful one.
 
 \emph{At Higher Levels.} When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d6 for each slot level above 2nd.
 
-\DndSpellHeader{Tasha's Mind Whip}{2nd-level enchantment}{1 action}{90 feet}{V}{1 round}
+\DndSpellHeader{Tasha's Mind Whip$\ast$}{2nd-level enchantment}{1 action}{90 feet}{V}{1 round}
 
 You psychically lash out at one creature you can see within range. The target must make an Intelligence saving throw. On a failed save, the target takes 3d6 psychic damage, and it can't take a reaction until the end of its next turn. Moreover, on its next turn, it must choose whether it gets a move, an action, or a bonus action; it gets only one of the three. On a successful save, the target takes half as much damage and suffers none of the spell's other effects.
 
 \emph{At Higher Levels.} When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd. The creatures must be within 30 feet of each other when you target them.
 
-\section{3rd Level (slots: 2) -- 2 prepared}
+\section{3rd Level (slots: 2)}
 
-\DndSpellHeader{Haste}{3rd-level transmutation}{1 action}{30 feet}{V, S, M (a shaving of licorice root)}{1 minute (concentration)}
+\DndSpellHeader{Haste$\ast$}{3rd-level transmutation}{1 action}{30 feet}{V, S, M (a shaving of licorice root)}{1 minute (concentration)}
 
 Choose a willing creature that you can see within range. Until the spell ends, the target's speed is doubled, it gains a +2 bonus to AC, it has advantage on Dexterity saving throws, and it gains an additional action on each of its turns. That action can be used only to take the Attack (one weapon attack only), Dash, Disengage, Hide, or Use an Object action.
 
 When the spell ends, the target can't move or take actions until after its next turn, as a wave of lethargy sweeps over it.
 
-\DndSpellHeader{Fireball}{3rd-level evocation}{1 action}{150 feet}{V, S, M (a tiny ball of bat guano and sulfur)}{Instantaneous}
+\DndSpellHeader{Fireball$\ast$}{3rd-level evocation}{1 action}{150 feet}{V, S, M (a tiny ball of bat guano and sulfur)}{Instantaneous}
 
 A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame. Each creature in a 20-foot-radius sphere centered on that point must make a Dexterity saving throw. A target takes 8d6 fire damage on a failed save, or half as much damage on a successful one.
 

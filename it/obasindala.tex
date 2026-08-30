@@ -4,7 +4,7 @@
 %  Umano Variante (PHB 2014 - dati da 5e.tools)
 %  Compila con:  pdflatex obasindala.tex   (2 passate)
 % ============================================================
-\documentclass[letterpaper,twocolumn,openany,nodeprecatedcode]{dndbook}
+\documentclass[letterpaper,twocolumn,openany,nodeprecatedcode,justified]{dndbook}
 \usepackage[italian]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
@@ -20,6 +20,11 @@
 \date{\today}
 
 \begin{document}
+
+% Justificazione pulita: riattivo la sillabazione bloccata da dndbook
+\hyphenpenalty=50
+\tolerance=400
+\emergencystretch=1.5em
 
 \chapter*{Scheda del personaggio}
 
@@ -136,19 +141,24 @@
 
   \DndMonsterSection{Incantesimi (CD 16, bonus attacco $+8$)}
 
+  \DndMonsterAction{Preparazione Incantesimi}
+  Puoi preparare 10 incantesimi al termine di un riposo lungo (livello 5 +
+  modificatore di Intelligenza $+5$). Gli incantesimi preparati sono indicati
+  nel libro con un asterisco ($\ast$).
+
   \DndMonsterAction{Trucchetti (4)}
   Luce, Stretta Folgorante, Dardo di Fuoco, Tocco Gelido.
 
-  \DndMonsterAction{Livello 1º (slot 4, 4 preparati)}
+  \DndMonsterAction{Livello 1º (slot 4)}
   Globo Cromatico, Armatura Magica, Dardo Incantato, Scudo.\\
   \emph{Rituali nel libro (non preparati):} Allarme, Identificare,
   Individuazione del Magico, Trova Famiglio.
 
-  \DndMonsterAction{Livello 2º (slot 3, 4 preparati)}
+  \DndMonsterAction{Livello 2º (slot 3)}
   Allucinazione di Forza, Invisibilità, Soffio del Drago, Frusta Mentale
   di Tasha.
 
-  \DndMonsterAction{Livello 3º (slot 2, 2 preparati)}
+  \DndMonsterAction{Livello 3º (slot 2)}
   Velocità, Palla di Fuoco (8d6, TS Des CD 16, sfera 6 m).
 
   \DndMonsterSection{Equipaggiamento}
@@ -230,6 +240,9 @@ portale verso il Piano Astrale.
 
 \chapter*{Incantesimi}
 
+Gli incantesimi preparati sono contrassegnati da un asterisco ($\ast$) dopo il
+nome. Quelli del libro non preparati sono raccolti sotto \emph{Rituali nel libro}.
+
 \section{Trucchetti (4)}
 
 \DndSpellHeader{Luce}{Trucchetto di evocazione}{1 azione}{Tocco}{V, M (una lucciola o del muschio fosforescente)}{1 ora}
@@ -258,25 +271,25 @@ Se colpisci un bersaglio non morto, quest'ultimo ha anche svantaggio sui tiri pe
 
 I danni di questo incantesimo aumentano di 1d8 quando raggiungi il 5° livello (2d8), l'11° livello (3d8) e il 17° livello (4d8).
 
-\section{Livello 1 (slot: 4) -- 4 preparati}
+\section{Livello 1 (slot: 4)}
 
-\DndSpellHeader{Globo Cromatico}{Evocazione di 1° livello}{1 azione}{27 metri}{V, S, M (un diamante del valore di almeno 50 mo)}{Istantanea}
+\DndSpellHeader{Globo Cromatico$\ast$}{Evocazione di 1° livello}{1 azione}{27 metri}{V, S, M (un diamante del valore di almeno 50 mo)}{Istantanea}
 
 Scagli una sfera di energia del diametro di 10 cm contro una creatura che puoi vedere entro gittata. Scegli il tipo di sfera che crei tra acido, freddo, fuoco, fulmine, veleno o tuono, quindi effettua un attacco incantato a distanza contro il bersaglio. Se l'attacco colpisce, la creatura subisce 3d8 danni del tipo scelto.
 
 \emph{A livelli superiori.} Quando lanci questo incantesimo con uno slot incantesimo di 2° livello o superiore, i danni aumentano di 1d8 per ogni livello di slot superiore al 1°.
 
-\DndSpellHeader{Armatura Magica}{Abiurazione di 1° livello}{1 azione}{Tocco}{V, S, M (un pezzo di cuoio stagionato)}{8 ore}
+\DndSpellHeader{Armatura Magica$\ast$}{Abiurazione di 1° livello}{1 azione}{Tocco}{V, S, M (un pezzo di cuoio stagionato)}{8 ore}
 
 Tocchi una creatura volenterosa che non indossa un'armatura e una forza magica protettiva la avvolge fino a quando l'incantesimo non ha termine. La CA base del bersaglio diventa 13 + il suo modificatore di Destrezza. L'incantesimo ha termine se il bersaglio indossa un'armatura o se lo dissipi con un'azione.
 
-\DndSpellHeader{Dardo Incantato}{Evocazione di 1° livello}{1 azione}{36 metri}{V, S}{Istantanea}
+\DndSpellHeader{Dardo Incantato$\ast$}{Evocazione di 1° livello}{1 azione}{36 metri}{V, S}{Istantanea}
 
 Crei tre dardi luminosi di forza magica. Ogni dardo colpisce una creatura a tua scelta che puoi vedere entro gittata. Un dardo infligge 1d4 + 1 danni da forza al suo bersaglio. I dardi colpiscono tutti simultaneamente e puoi indirizzarli a colpire una creatura o più creature.
 
 \emph{A livelli superiori.} Quando lanci questo incantesimo con uno slot incantesimo di 2° livello o superiore, l'incantesimo crea un dardo in più per ogni livello di slot superiore al 1°.
 
-\DndSpellHeader{Scudo}{Abiurazione di 1° livello}{1 reazione, che usi quando sei colpito da un attacco o preso di mira da dardo incantato}{Personale}{V, S}{1 round}
+\DndSpellHeader{Scudo$\ast$}{Abiurazione di 1° livello}{1 reazione, che usi quando sei colpito da un attacco o preso di mira da dardo incantato}{Personale}{V, S}{1 round}
 
 Una barriera invisibile di forza magica appare e ti protegge. Fino all'inizio del tuo prossimo turno, hai un bonus di +5 alla CA, incluso contro l'attacco che ha innescato l'incantesimo, e non subisci danni da dardo incantato.
 
@@ -316,9 +329,9 @@ Non puoi avere più di un famiglio alla volta. Se lanci questo incantesimo mentr
 
 Infine, quando lanci un incantesimo con gittata al tocco, il tuo famiglio può recapitarlo come se lo avesse lanciato lui. Il tuo famiglio deve trovarsi entro 30 metri da te e deve usare la sua reazione per recapitare l'incantesimo quando lo lanci. Se l'incantesimo richiede un tiro per colpire, usi il tuo modificatore di attacco per il tiro.
 
-\section{Livello 2 (slot: 3) -- 4 preparati}
+\section{Livello 2 (slot: 3)}
 
-\DndSpellHeader{Allucinazione di Forza}{Illusione di 2° livello}{1 azione}{18 metri}{V, S, M (un batuffolo di lana)}{1 minuto (concentrazione)}
+\DndSpellHeader{Allucinazione di Forza$\ast$}{Illusione di 2° livello}{1 azione}{18 metri}{V, S, M (un batuffolo di lana)}{1 minuto (concentrazione)}
 
 Costruisci un'illusione che attecchisce nella mente di una creatura che puoi vedere entro gittata. Il bersaglio deve effettuare un tiro salvezza su Intelligenza. In caso di fallimento, crei un oggetto, una creatura o un altro fenomeno visibile fantasma a tua scelta, non più grande di un cubo di 3 metri di lato, percettibile solo dal bersaglio per la durata. Questo incantesimo non ha effetti su non morti o costrutti.
 
@@ -330,33 +343,33 @@ Quando un bersaglio è affetto dall'incantesimo, lo tratta come se fosse reale. 
 
 Un bersaglio affetto è così convinto della realtà della fantasia da poterne persino subire danni. Una fantasia creata per apparire come una creatura può attaccare il bersaglio. Allo stesso modo, una fantasia creata per apparire come fuoco, una pozza di acido o lava può bruciare il bersaglio. Ogni turno, nel tuo turno, la fantasia può infliggere 1d6 danni psichici al bersaglio se quest'ultimo si trova nell'area della fantasia o entro 1,5 metri da essa, purché l'illusione sia di una creatura o di una minaccia che potrebbe logicamente infliggere danni, ad esempio attaccando. Il bersaglio percepisce i danni come un tipo appropriato all'illusione.
 
-\DndSpellHeader{Invisibilità}{Illusione di 2° livello}{1 azione}{Tocco}{V, S, M (una ciglia racchiusa in gomma arabica)}{1 ora (concentrazione)}
+\DndSpellHeader{Invisibilità$\ast$}{Illusione di 2° livello}{1 azione}{Tocco}{V, S, M (una ciglia racchiusa in gomma arabica)}{1 ora (concentrazione)}
 
 Una creatura che tocchi diventa invisibile fino a quando l'incantesimo non ha termine. Tutto ciò che il bersaglio indossa o trasporta è invisibile fintantoché rimane addosso al bersaglio. L'incantesimo ha termine per un bersaglio che attacca o lancia un incantesimo.
 
 \emph{A livelli superiori.} Quando lanci questo incantesimo con uno slot incantesimo di 3° livello o superiore, puoi prendere di mira una creatura aggiuntiva per ogni livello di slot superiore al 2°.
 
-\DndSpellHeader{Soffio del Drago}{Trasmutazione di 2° livello}{1 azione bonus}{Tocco}{V, S, M (un peperoncino piccante)}{1 minuto (concentrazione)}
+\DndSpellHeader{Soffio del Drago$\ast$}{Trasmutazione di 2° livello}{1 azione bonus}{Tocco}{V, S, M (un peperoncino piccante)}{1 minuto (concentrazione)}
 
 Tocchi una creatura volenterosa e la infondi con il potere di sputare energia magica dalla bocca, purché ne abbia una. Scegli acido, freddo, fuoco, fulmine o veleno. Fino a quando l'incantesimo non ha termine, la creatura può usare un'azione per esalare energia del tipo scelto in un cono di 4,5 metri. Ogni creatura in quell'area deve effettuare un tiro salvezza su Destrezza, subendo 3d6 danni del tipo scelto in caso di fallimento, o la metà in caso di successo.
 
 \emph{A livelli superiori.} Quando lanci questo incantesimo con uno slot incantesimo di 3° livello o superiore, i danni aumentano di 1d6 per ogni livello di slot superiore al 2°.
 
-\DndSpellHeader{Frusta Mentale di Tasha}{Ammaliamento di 2° livello}{1 azione}{27 metri}{V}{1 round}
+\DndSpellHeader{Frusta Mentale di Tasha$\ast$}{Ammaliamento di 2° livello}{1 azione}{27 metri}{V}{1 round}
 
 Frusti psichicamente una creatura che puoi vedere entro gittata. Il bersaglio deve effettuare un tiro salvezza su Intelligenza. In caso di fallimento, il bersaglio subisce 3d6 danni psichici e non può effettuare reazioni fino alla fine del suo prossimo turno. Inoltre, nel suo prossimo turno, deve scegliere se ottenere un movimento, un'azione o un'azione bonus; ottiene solo uno dei tre. In caso di successo, il bersaglio subisce la metà dei danni e non subisce gli altri effetti dell'incantesimo.
 
 \emph{A livelli superiori.} Quando lanci questo incantesimo con uno slot incantesimo di 3° livello o superiore, puoi prendere di mira una creatura aggiuntiva per ogni livello di slot superiore al 2°. Le creature devono trovarsi entro 9 metri l'una dall'altra quando le prendi di mira.
 
-\section{Livello 3 (slot: 2) -- 2 preparati}
+\section{Livello 3 (slot: 2)}
 
-\DndSpellHeader{Velocità}{Trasmutazione di 3° livello}{1 azione}{9 metri}{V, S, M (un truciolo di radice di liquirizia)}{1 minuto (concentrazione)}
+\DndSpellHeader{Velocità$\ast$}{Trasmutazione di 3° livello}{1 azione}{9 metri}{V, S, M (un truciolo di radice di liquirizia)}{1 minuto (concentrazione)}
 
 Scegli una creatura volenterosa che puoi vedere entro gittata. Fino a quando l'incantesimo non ha termine, la velocità del bersaglio raddoppia, guadagna un bonus di +2 alla CA, ha vantaggio sui tiri salvezza su Destrezza e guadagna un'azione aggiuntiva in ciascuno dei suoi turni. Quell'azione può essere usata solo per compiere le azioni Attacca (un solo attacco con arma), Scatta, Disimpegna, Nasconditi o Usa un Oggetto.
 
 Quando l'incantesimo ha termine, il bersaglio non può muoversi o compiere azioni fino al termine del suo prossimo turno, poiché un'ondata di letargia lo travolge.
 
-\DndSpellHeader{Palla di Fuoco}{Evocazione di 3° livello}{1 azione}{45 metri}{V, S, M (una pallina di guano di pipistrello e zolfo)}{Istantanea}
+\DndSpellHeader{Palla di Fuoco$\ast$}{Evocazione di 3° livello}{1 azione}{45 metri}{V, S, M (una pallina di guano di pipistrello e zolfo)}{Istantanea}
 
 Un bagliore luminoso scatta dal tuo dito puntato verso un punto a tua scelta entro gittata e poi sboccia con un basso ruggito in un'esplosione di fiamme. Ogni creatura in una sfera di 6 metri di raggio centrata su quel punto deve effettuare un tiro salvezza su Destrezza. Un bersaglio subisce 8d6 danni da fuoco in caso di fallimento, o la metà in caso di successo.
 
