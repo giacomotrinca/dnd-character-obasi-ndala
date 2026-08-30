@@ -1,0 +1,316 @@
+% ============================================================
+%  OBASI N'DALA - Character sheet (dndbook class)
+%  Wizard - Order of Scribes (5th level)
+%  Variant Human (PHB 2014 - data from 5e.tools)
+%  Build with:  pdflatex obasindala.tex   (2 passes)
+% ============================================================
+\documentclass[letterpaper,twocolumn,openany,nodeprecatedcode]{dndbook}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{graphicx}
+
+\title{Obasi N'Dala \\
+  \large Character Sheet --- Wizard of the Order of Scribes}
+\author{Player}
+\date{\today}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+\tableofcontents
+\mainmatter
+
+% ------------------------------------------------------------
+\part{Character Sheet}
+% ------------------------------------------------------------
+
+\chapter{Identity}
+
+\chapter{Character Sheet}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.62\columnwidth]{ObasiNdala.jpeg}
+  \caption{Obasi N'Dala, portrait.}
+\end{figure}
+
+\begin{DndMonster}[width=\textwidth + 8pt]{Obasi N'Dala}
+  \DndMonsterType{Variant Human, Wizard (Order of Scribes) 5th, Chaotic Good}
+
+  \DndMonsterBasics[
+    armor-class = {16 (Mage Armor + Cloak of Protection)},
+    hit-points  = {30 (8 + 4d6 + 4d6)},
+    speed       = {9 m (30 ft)},
+  ]
+
+  \DndMonsterAbilityScores[
+    str = 11,
+    dex = 14,
+    con = 14,
+    int = 20,
+    wis = 12,
+    cha = 12,
+  ]
+
+  \DndMonsterDetails[
+    saving-throws = {Int $+9$, Wis $+5$, Dex $+3$, Con $+3$, Cha $+2$, Str $+1$ (incl. +1 Cloak)},
+    skills = {Arcana $+8$, History $+8$, Investigation $+8$, Religion $+8$, Nature $+5$},
+    senses = {Passive Perception 11},
+    languages = {Common + one extra language},
+    challenge = 5,
+    proficiency-bonus, % = +3
+  ]
+
+  \DndMonsterSection{Traits}
+
+  \DndMonsterAction{Resilient (CON)}
+  $+1$ Con; proficiency in Constitution saving throws.
+
+  \DndMonsterAction{Arcane Recovery}
+  Once per day, when you finish a short rest, you regain expended spell
+  slots totaling no more than half your wizard level (rounded up), and
+  none of the slots can be 6th level or higher.
+
+  \DndMonsterAction{Ritual Casting}
+  You can cast a wizard spell with the \emph{ritual} tag as a ritual if
+  the spell is in your spellbook, without having it prepared.
+
+  \DndMonsterAction{Awakened Spellbook}
+  You use the book as a spellcasting focus; you can change the damage
+  type of a spell to one from another spell of the same level in the
+  book; casting a ritual uses the normal casting time instead of adding
+  10 minutes (once per day).
+
+  \DndMonsterAction{Magical Quill}
+  As a bonus action, you create a pen that needs no ink; copying a spell
+  takes 2 minutes per level; you erase what you wrote by waving the
+  feather (within 1.5 m).
+
+  \DndMonsterAction{Spellbook}
+  Copying a spell into the book costs 2 hours and 50~gp per level;
+  copying from a scroll requires an Intelligence (Arcana) check with a
+  DC of $10$ + the spell's level (the scroll is destroyed either way).
+  Preparing the day's spells takes at least 1 minute per level and is
+  completed after a long rest; you can prepare a number of spells equal
+  to your Intelligence modifier + your wizard level (5 + 5 = 10).
+
+  \DndMonsterAction{Researcher (Acolyte)}
+  When you attempt to learn or recall a piece of lore, if you do not
+  know it, you often know where and from whom to obtain it: a library,
+  a scriptorium, a university, a sage, or another learned person. With
+  the Dungeon Master's permission, you can know details about the
+  religions, ceremonies, and deities you come into contact with.
+
+  \DndMonsterSection{Actions}
+
+  \DndMonsterAction{Dagger $+1$ (Mithril)}
+  \textit{Melee.} $+6$ to hit, reach 1.5 m, one target. Hit: 4 (1d4$+3$)
+  piercing damage.
+
+  \DndMonsterAction{Fire Bolt (cantrip)}
+  \textit{Ranged spell attack.} $+8$ to hit, range 36 m, one target.
+  Hit: 2d10 fire damage.
+
+  \DndMonsterAction{Shocking Grasp (cantrip)}
+  \textit{Melee spell attack.} $+8$ to hit; advantage against targets
+  wearing metal armor. Hit: 2d8 lightning damage and the target can't
+  take reactions until the start of your next turn.
+
+  \DndMonsterAction{Magic Missile (1st-level, 3)}
+  \textit{Spell.} You create three darts (one more for each slot level
+  above 1st), each dealing 1d4$+1$ force damage.
+
+  \DndMonsterAction{Chromatic Orb (1st-level) }
+  \textit{Ranged spell attack.} $+8$ to hit, range 27 m. Hit: 3d8 (acid,
+  cold, lightning, fire, thunder, or poison), $+1$d8 for each slot level
+  above 1st.
+
+  \DndMonsterSection{Spells (DC 16, attack bonus $+8$)}
+
+  \DndMonsterAction{Cantrips (4)}
+  Fire Bolt, Shocking Grasp, Light (LVX), \emph{(4th cantrip)}.
+
+  \DndMonsterAction{1st Level (4 slots, 4 prepared)}
+  Chromatic Orb, Mage Armor, Magic Missile, Shield.\\
+  \emph{Rituals in the book:} Alarm, Identify, Detect Magic, Find
+  Familiar.
+
+  \DndMonsterAction{2nd Level (3 slots, 3 prepared)}
+  Phantasmal Force, Invisibility, Dragon's Breath, Tasha's Mind Whip.
+
+  \DndMonsterAction{3rd Level (2 slots, 2 prepared)}
+  Glyph of Warding, Fireball (8d6, DEX save DC 16, 6 m sphere).
+
+  \DndMonsterSection{Equipment}
+  Dagger $+1$ (mithril), Component Pouch, Backpack, Pen, 10 sheets of
+  parchment, pouch of sand, knife, common clothes, 12 spell scrolls.
+
+  \DndMonsterSection{Magic items}
+  Ring of Spell Storing (rare), Pearl of Power (uncommon), Cloak of
+  Protection (uncommon, $+1$ AC and saving throws), Portable Hole
+  (rare).
+
+  Max load 82.5~kg -- Coin: 708~gp.
+\end{DndMonster}
+
+\clearpage
+
+\section{Variant Human traits (PHB 2014)}
+\begin{itemize}
+  \item \textbf{Age.} Humans reach adulthood in their late teens and
+        live less than a century.
+  \item \textbf{Size.} Humans vary widely in height and build. Your size
+        is Medium.
+  \item \textbf{Speed.} Your base walking speed is 9 meters.
+  \item \textbf{Ability Score Increase.} Two different ability scores of
+        your choice increase by 1.
+  \item \textbf{Skills.} You gain proficiency in one skill of your
+        choice.
+  \item \textbf{Feat.} You gain one feat of your choice.
+  \item \textbf{Languages.} You can speak, read, and write Common and
+        one extra language of your choice.
+\end{itemize}
+
+Feat chosen: \textbf{Resilient (CON)} --- +1 Con, proficiency in
+Constitution saving throws.
+
+% ------------------------------------------------------------
+\part{Equipment \& Spells}
+% ------------------------------------------------------------
+
+\chapter{Equipment}
+\section{Adventuring gear}
+\begin{itemize}
+  \item 1 Dagger $+1$ with a bronze hilt and a mithril blade
+  \item 1 Component Pouch
+  \item 1 Backpack
+  \item 1 Pen
+  \item 10 Sheets of parchment (not for spells)
+  \item 1 Pouch of sand
+  \item 1 Knife
+  \item 1 Common clothes
+  \item 12 Spell scrolls
+\end{itemize}
+
+Carrying capacity: \textbf{82.5~kg}. Coins: \textbf{708~gp}.
+
+\section{Magic items}
+\begin{DndTable}[header=Magic inventory]{cl}
+  Ring of Spell Storing   & Rare \\
+  Pearl of Power          & Uncommon \\
+  Cloak of Protection     & Uncommon \\
+  Portable Hole           & Rare \\
+\end{DndTable}
+
+\subsection*{Ring of Spell Storing} (Rare, attunement)
+This ring stores spells cast into it, holding them until the attuned
+wearer uses them. The ring can store up to 5 levels worth of spells at a
+time. When found, it contains 1d6$-1$ levels of stored spells chosen by
+the DM. Any creature can cast a spell of 1st-5th level into the ring by
+touching the ring as the spell is cast. The spell has no effect, other
+than to be stored in the ring. If the ring can't hold the spell, the
+spell is expended without effect. The level of the slot used to cast the
+spell determines how much space it uses. While wearing this ring, you can
+cast any spell stored in it. The spell uses the slot level, spell save
+DC, spell attack bonus, and spellcasting ability of the original caster,
+but is otherwise treated as if you cast the spell. The spell cast from
+the ring is no longer stored in it, freeing up space.
+
+\subsection*{Pearl of Power} (Uncommon, attunement)
+While this pearl is on your person, you can use an action to speak its
+command word and regain one expended spell slot. If the expended slot is
+of 4th level or higher, the new slot is 3rd level. Once you have used the
+pearl, it can't be used again until the next dawn.
+
+\subsection*{Cloak of Protection} (Uncommon, attunement)
+You gain a $+1$ bonus to AC and to saving throws while you wear this
+cloak.
+
+\subsection*{Portable Hole} (Rare)
+This fine black cloth, soft as silk, is folded up to the dimensions of a
+handkerchief. It unfolds into a circular sheet 1.8 meters in diameter.
+You can use an action to unfold it and place it over or against a solid
+surface, whereupon the portable hole creates an extradimensional hole
+3 meters deep. The cylindrical space within the hole exists on a
+different plane, so it has no effect on the space it's in and can't open
+passages. Any creature or object within its reach can fit inside. As long
+as the hole remains open, you can use it as a hideout. You can use an
+action to close it by folding the cloth closed, and any creatures or
+objects within remain inside. If closed with a creature inside, it can
+use an action to make a Strength check DC 10 to force its way out and
+emerge within 1.5 meters of the cloth or its carrier. A breathing
+creature inside a closed portable hole can survive up to 10 minutes, then
+begins to suffocate. Placing the portable hole inside an extradimensional
+space (such as that of a bag of holding) instantly destroys both items
+and opens a gate to the Astral Plane.
+
+\section{Attacks}
+\begin{DndTable}[header=Attacks]{cccc}
+  \textbf{Attack} & \textbf{Bonus} & \textbf{Damage/Type} & \textbf{Notes} \\
+  Dagger $+1$ (mithril) & $+6$ & 1d4$+3$ Piercing & -- \\
+  Fire Bolt & $+8$ & 2d10 Fire & Cantrip \\
+  Shocking Grasp & $+8$ & 2d8 Lightning & Cantrip \\
+  Chromatic Orb & $+8$ & 3d8 Elemental & 1st-level (or higher) \\
+  Magic Missile & $+8$ & 3d4$+3$ Force & 1st-level (or higher), multi target \\
+  Dragon's Breath & -- & 3d6 Elemental & DEX save, cone \\
+  Tasha's Mind Whip & -- & 3d6 Psychic & INT save, DC 16 \\
+  Phantasmal Force & -- & 1d6 Psychic/rnd & INT save \\
+  Fireball & -- & 8d6 Fire & DEX save, sphere \\
+\end{DndTable}
+
+\chapter{Spells}
+\section{Cantrips (4)}
+Light (LVX) \textbullet{} Shocking Grasp \textbullet{} Fire Bolt
+\textbullet{} \emph{(4th cantrip)}
+
+\section{1st Level (slots: 4) -- 4 prepared}
+Chromatic Orb \textbullet{} Mage Armor \textbullet{} Magic Missile
+\textbullet{} Shield\\
+\emph{Rituals in the book:} Alarm \textbullet{} Identify \textbullet{}
+Detect Magic \textbullet{} Find Familiar
+
+\section{2nd Level (slots: 3) -- 3 prepared}
+Phantasmal Force \textbullet{} Invisibility \textbullet{}
+Dragon's Breath \textbullet{} Tasha's Mind Whip
+
+\section{3rd Level (slots: 2) -- 2 prepared}
+Glyph of Warding \textbullet{} Fireball
+
+% ------------------------------------------------------------
+\part{Background}
+% ------------------------------------------------------------
+
+\chapter{The Character}
+
+\DndDropCapLine{O}{basi N'Dala} is a wizard of the Order of Scribes,
+originally raised as an \emph{Acolyte}.
+
+\section{Personality traits}
+I always speak in a low, calm, and relaxed tone of voice, even while
+unleashing lethal magic. My peaceful demeanor and unkempt appearance
+hide a calculating and ruthless mind.
+
+\section{Ideals}
+Magic is the supreme force of the universe and must be mastered only by
+those with the discipline to study it. Those born with innate powers are
+an anomaly of nature and must be caged or eliminated.
+
+\section{Bonds}
+My quill-hairpin is my most trusted companion, the extension of my mind.
+The Black Network is the tool through which I will bring order to
+Waterdeep and take Undermountain.
+
+\section{Flaws}
+My intellectual pride is immense: I systematically underestimate
+sorcerers and innate spellcasters, treating them as undisciplined animals.
+Moreover, my ambition to rule Undermountain blinds me to the true,
+unfathomable madness of that place.
+
+\begin{DndComment}{Player's notes}
+Reserve this box for notes, level-ups, equipment, or campaign details.
+\end{DndComment}
+
+\end{document}

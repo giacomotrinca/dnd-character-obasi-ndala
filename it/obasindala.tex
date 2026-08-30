@@ -1,0 +1,317 @@
+% ============================================================
+%  OBASI N'DALA - Scheda del personaggio (classe dndbook)
+%  Mago - Ordine degli Scriba (livello 5)
+%  Umano Variante (PHB 2014 - dati da 5e.tools)
+%  Compila con:  pdflatex obasindala.tex   (2 passate)
+% ============================================================
+\documentclass[letterpaper,twocolumn,openany,nodeprecatedcode]{dndbook}
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{graphicx}
+
+\title{Obasi N'Dala \\
+  \large Scheda del Personaggio --- Mago dell'Ordine degli Scriba}
+\author{Giocatore}
+\date{\today}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+\tableofcontents
+\mainmatter
+
+% ------------------------------------------------------------
+\part{Scheda}
+% ------------------------------------------------------------
+
+\chapter{Identità}
+
+\chapter{Scheda del personaggio}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.62\columnwidth]{ObasiNdala.jpeg}
+  \caption{Obasi N'Dala, ritratto.}
+\end{figure}
+
+\begin{DndMonster}[width=\textwidth + 8pt]{Obasi N'Dala}
+  \DndMonsterType{Umano Variante, Mago (Ordine degli Scriba) 5º, Caotico Buono}
+
+  \DndMonsterBasics[
+    armor-class = {16 (Armatura Magica + Mantello della Protezione)},
+    hit-points  = {30 (8 + 4d6 + 4d6)},
+    speed       = {9 m (30 ft)},
+  ]
+
+  \DndMonsterAbilityScores[
+    str = 11,
+    dex = 14,
+    con = 14,
+    int = 20,
+    wis = 12,
+    cha = 12,
+  ]
+
+  \DndMonsterDetails[
+    saving-throws = {Int $+9$, Sag $+5$, Des $+3$, Cos $+3$, Car $+2$, For $+1$ (incl. +1 Mantello)},
+    skills = {Arcano $+8$, Storia $+8$, Indagare $+8$, Religione $+8$, Natura $+5$},
+    senses = {Percezione passiva 11},
+    languages = {Corrente + una lingua a scelta},
+    challenge = 5,
+    proficiency-bonus, % = +3
+  ]
+
+  \DndMonsterSection{Tratti}
+
+  \DndMonsterAction{Resiliente (COS)}
+  $+1$ Cos; competente nei tiri salvezza su Costituzione.
+
+  \DndMonsterAction{Recupero Arcano}
+  Una volta al giorno, al termine di un riposo breve, recuperi slot
+  incantesimo spesi per un livello complessivo $\le$ metà dei livelli da
+  mago (arrotondato per eccesso), nessuno di 6º o superiore.
+
+  \DndMonsterAction{Lancio Rituale}
+  Puoi lanciare come rituale un incantesimo da mago con tag \emph{rituale}
+  che sia nel tuo libro, senza averlo preparato.
+
+  \DndMonsterAction{Libro Risvegliato}
+  Usi il libro come focus incantatorio; puoi cambiare il tipo di danno di
+  un incantesimo con uno di un altro incantesimo dello stesso livello nel
+  libro; il lancio rituale usa il tempo normale invece di aggiungere 10
+  minuti (1 volta al giorno).
+
+  \DndMonsterAction{Penna Magica}
+  Come azione bonus crei una penna che non necessita inchiostro; copiare
+  un incantesimo richiede 2 minuti per livello; cancelli ciò che hai
+  scritto sventolando la piuma (entro 1,5 m).
+
+  \DndMonsterAction{Libro degli Incantesimi}
+  Copiare un incantesimo nel libro richiede 2 ore e 50~mo per livello;
+  copiare da una pergamena richiede una prova di Intelligenza (Arcano)
+  con CD $10$ + livello (la pergamena viene distrutta in ogni caso).
+  Preparare gli incantesimi del giorno richiede almeno 1 minuto per
+  livello e si completa dopo un riposo lungo; puoi preparare un numero di
+  incantesimi pari al tuo modificatore di Intelligenza + il tuo livello
+  da mago (5 + 5 = 10).
+
+  \DndMonsterAction{Ricercatore (Accolito)}
+  Quando tenti di apprendere o ricordare un'informazione, se non la
+  conosci sai spesso dove e da chi ottenerla: una biblioteca, uno
+  scriptorium, un'università, un saggio o un'altra persona colta. Con il
+  permesso del Dungeon Master puoi conoscere dettagli sulle religioni,
+  le cerimonie e le divinità con cui hai a che fare.
+
+  \DndMonsterSection{Azioni}
+
+  \DndMonsterAction{Pugnale $+1$ (Mithril)}
+  \textit{Mischia.} $+6$ a colpire, portata 1,5 m, un bersaglio. Colpito:
+  4 (1d4$+3$) danni perforanti.
+
+  \DndMonsterAction{Dardo di Fuoco (trucchetto)}
+  \textit{A distanza incantata.} $+8$ a colpire, gittata 36 m, un
+  bersaglio. Colpito: 2d10 danni da fuoco.
+
+  \DndMonsterAction{Stretta Folgorante (trucchetto)}
+  \textit{Mischia incantata.} $+8$ a colpire; vantaggio su bersagli con
+  armatura di metallo. Colpito: 2d8 danni da fulmine e il bersaglio non
+  può compiere reazioni fino all'inizio del tuo prossimo turno.
+
+  \DndMonsterAction{Dardo Incantato (slot 1º, 3) }
+  \textit{Incantesimo.} Crei tre dardi (uno in più per ogni livello di
+  slot oltre il 1º), ognuno infligge 1d4$+1$ danni da forza.
+
+  \DndMonsterAction{Globo Cromatico (slot 1º) }
+  \textit{A distanza incantata.} $+8$ a colpire, gittata 27 m. Colpito:
+  3d8 (acido, freddo, fulmine, fuoco, tuono o veleno), +1d8 per slot oltre
+  il 1º.
+
+  \DndMonsterSection{Incantesimi (CD 16, bonus attacco $+8$)}
+
+  \DndMonsterAction{Trucchetti (4)}
+  Dardo di Fuoco, Stretta Folgorante, LVX (Luce), \emph{(4º trucchetto)}.
+
+  \DndMonsterAction{Livello 1º (slot 4, preparati 4)}
+  Globo Cromatico, Armatura Magica, Dardo Incantato, Scudo.\\
+  \emph{Rituali nel libro:} Allarme, Identificare, Individuazione del
+  Magico, Trova Famiglio.
+
+  \DndMonsterAction{Livello 2º (slot 3, preparati 3)}
+  Allucinazione di Forza, Invisibilità, Soffio del Drago, Frusta Mentale
+  di Tasha.
+
+  \DndMonsterAction{Livello 3º (slot 2, preparati 2)}
+  Glifo di Interdizione, Palla di Fuoco (8d6, TS Des CD 16, sfera 6 m).
+
+  \DndMonsterSection{Equipaggiamento}
+  Pugnale $+1$ (mithril), Borsa dei Componenti, Zaino, Penna, 10 fogli di
+  pergamena, sacchetto di sabbia, coltello, abito comune, 12 pergamene per
+  incantesimi.
+
+  \DndMonsterSection{Oggetti magici}
+  Anello Accumula Incantesimi (raro), Perla del Potere (non comune),
+  Mantello della Protezione (non comune, $+1$ CA e TS), Buco Portatile
+  (raro).
+
+  Carico max 82,5~kg -- Monete: 708~mo.
+\end{DndMonster}
+
+\clearpage
+
+\section{Capacità razziali (Umano Variante, PHB 2014)}
+\begin{itemize}
+  \item \textbf{Età.} Gli umani raggiungono l'età adulta verso la fine
+        dell'adolescenza e vivono meno di un secolo.
+  \item \textbf{Taglia.} Gli umani variano molto in altezza e corporatura.
+        La tua taglia è Media.
+  \item \textbf{Velocità.} La tua velocità base sul terreno è di 9 metri.
+  \item \textbf{Incremento punteggi.} Aumenta di 1 due diverse
+        caratteristiche a tua scelta.
+  \item \textbf{Abilità.} Sei competente in un'abilità a tua scelta.
+  \item \textbf{Talento.} Ottieni un talento a tua scelta.
+  \item \textbf{Lingue.} Puoi parlare, leggere e scrivere il Corrente e
+        una lingua extra a tua scelta.
+\end{itemize}
+
+Talento scelto: \textbf{Resiliente (COS)} --- +1 Cos, competenza nei
+tiri salvezza su Costituzione.
+
+% ------------------------------------------------------------
+\part{Equipaggiamento e Magie}
+% ------------------------------------------------------------
+
+\chapter{Equipaggiamento}
+\section{Oggetti ordinari}
+\begin{itemize}
+  \item 1 Pugnale $+1$ con elsa in bronzo e lama in mithril
+  \item 1 Borsa dei Componenti
+  \item 1 Zaino
+  \item 1 Penna
+  \item 10 Fogli di pergamena (non per incantesimi)
+  \item 1 Sacchetto di sabbia
+  \item 1 Coltello
+  \item 1 Abito comune
+  \item 12 Pergamene per incantesimi
+\end{itemize}
+
+Capacità di carico: \textbf{82,5~kg}. Monete: \textbf{708~mo}.
+
+\section{Oggetti magici}
+\begin{DndTable}[header=Inventario magico]{cl}
+  Anello Accumula Incantesimi & Raro \\
+  Perla del Potere            & Non Comune \\
+  Mantello della Protezione   & Non Comune \\
+  Buco Portatile              & Raro \\
+\end{DndTable}
+
+\subsection*{Anello Accumula Incantesimi} (Raro, sintonizzazione)
+Questo anello immagazzina gli incantesimi lanciati al suo interno,
+conservandoli finché chi vi è in sintonia non li usa. L'anello può
+conservare fino a 5 livelli di incantesimi alla volta. Qualsiasi creatura
+può lanciare un incantesimo dal 1\textsuperscript{o} al 5\textsuperscript{o}
+livello sull'anello, toccandolo mentre lo lancia: l'incantesimo non ha
+effetto, se non essere immagazzinato. Il livello dello slot usato determina
+quanto spazio occupa. Mentre indossi l'anello, puoi lanciare qualunque
+incantesimo contenga: usa livelli slot, CD del tiro salvezza, bonus
+d'attacco e caratteristica del lanciatore originario, ma per il resto è
+considerato come se lo lanciassi tu. L'incantesimo lanciato non è più
+contenuto nell'anello, liberando spazio.
+
+\subsection*{Perla del Potere} (Non Comune, sintonizzazione)
+Mentre hai la perla sulla tua persona, puoi usare un'azione per pronunciare
+la sua parola di comando e recuperare uno slot incantesimo speso. Se lo slot
+speso era di 4\textsuperscript{o} livello o superiore, il nuovo slot è di
+3\textsuperscript{o} livello. Una volta usata, la perla non può essere
+riusata fino all'alba successiva.
+
+\subsection*{Mantello della Protezione} (Non Comune, sintonizzazione)
+Mentre indossi questo mantello, ottieni un bonus di $+1$ alla Classe Armatura
+e ai tiri salvezza.
+
+\subsection*{Buco Portatile} (Raro)
+Questo sottile panno nero, morbido come la seta, è piegato fino alle
+dimensioni di un fazzoletto. Si apre in un disco circolare di 1,8 metri di
+diametro. Con un'azione lo apri e lo posizioni su una superficie solida, dove
+crea un buco extradimensionale profondo 3 metri. Lo spazio cilindrico esiste
+su un piano diverso, quindi non può creare passaggi aperti. Anche se pieno,
+il buco non pesa praticamente nulla. Con un'azione lo richiudi ripiegandolo;
+creature o oggetti al suo interno rimangono nello spazio
+extradimensionale. Se richiuso con qualcuno dentro, questa può con un'azione
+compiere una prova di Forza CD 10 per farsi largo e uscire entro 1,5 metri
+dal buco o da chi lo trasporta. Una creatura che respira dentro un buco
+chiuso può sopravvivere fino a 10 minuti, poi inizia a soffocare. Inserire
+il buco portatile in uno spazio extradimensionale (come quello di una borsa
+conservante) distrugge istantaneamente entrambi gli oggetti e apre un
+portale verso il Piano Astrale.
+
+\section{Attacchi}
+\begin{DndTable}[header=Attacchi]{cccc}
+  \textbf{Attacco} & \textbf{Bonus} & \textbf{Danno/Tipo} & \textbf{Note} \\
+  Pugnale $+1$ (mithril) & $+6$ & 1d4$+3$ Perforante & -- \\
+  Dardo di Fuoco & $+8$ & 2d10 Fuoco & Trucchetto \\
+  Stretta Folgorante & $+8$ & 2d8 Fulmine & Trucchetto \\
+  Globo Cromatico & $+8$ & 3d8 Elementale & Slot 1 (o superiore) \\
+  Dardo Incantato & $+8$ & 3d4$+3$ Forza & Slot 1 (o superiore), multi bersaglio \\
+  Soffio del Drago & -- & 3d6 Elementale & TSD Destrezza, cono \\
+  Frusta Mentale di Tasha & -- & 3d6 Psichici & TS Intelligenza, CD 16 \\
+  Allucinazione di Forza & -- & 1d6 Psichici/rnd & TS Intelligenza \\
+  Palla di Fuoco & -- & 8d6 Fuoco & TS Destrezza, sfera \\
+\end{DndTable}
+
+\chapter{Incantesimi}
+\section{Trucchetti (4)}
+LVX (Luce) \textbullet{} Stretta Folgorante \textbullet{} Dardo di Fuoco
+\textbullet{} \emph{(4$^\circ$ trucchetto)}
+
+\section{Livello 1 (slot: 4) -- preparati 4}
+Globo Cromatico \textbullet{} Armatura Magica \textbullet{} Dardo Incantato
+\textbullet{} Scudo\\
+\emph{Rituali nel libro:} Allarme \textbullet{} Identificare
+\textbullet{} Individuazione del Magico \textbullet{} Trova Famiglio
+
+\section{Livello 2 (slot: 3) -- preparati 3}
+Allucinazione di Forza \textbullet{} Invisibilità \textbullet{}
+Soffio del Drago \textbullet{} Frusta Mentale di Tasha
+
+\section{Livello 3 (slot: 2) -- preparati 2}
+Glifo di Interdizione \textbullet{} Palla di Fuoco
+
+% ------------------------------------------------------------
+\part{Background}
+% ------------------------------------------------------------
+
+\chapter{Il personaggio}
+
+\DndDropCapLine{O}{basi N'Dala} è un mago dell'Ordine degli Scriba,
+accaduto originariamente come \emph{Accolito}.
+
+\section{Tratti caratteriali}
+Parlo sempre con un tono di voce basso, calmo e rilassato, anche mentre
+scateno magie letali. La mia espressione pacifica e il mio aspetto
+trasandato nascondono una mente calcolatrice e spietata.
+
+\section{Ideali}
+La magia è la forza suprema dell'universo e deve essere dominata solo da
+chi ha la disciplina per studiarla. Chi nasce con poteri innati è
+un'anomalia della natura e deve essere messo in gabbia o eliminato.
+
+\section{Legami}
+Il mio pennino-fermacapelli è il mio compagno più fidato, l'estensione
+della mia mente. La Rete Nera è lo strumento con cui porterò l'ordine a
+Waterdeep e mi prenderò Sottomonte.
+
+\section{Difetti}
+La mia superbia intellettuale è immensa: sottovaluto sistematicamente
+stregoni e incantatori innati, considerandoli animali indisciplinati. In
+più, la mia ambizione di dominare Sottomonte mi rende cieco di fronte
+alla vera, insondabile follia di quel luogo.
+
+\begin{DndComment}{Note del giocatore}
+Riserva questo riquadro per annotazioni, aggiornamenti di livello,
+equipaggiamento o dettagli della campagna.
+\end{DndComment}
+
+\end{document}
